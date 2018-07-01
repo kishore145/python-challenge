@@ -36,7 +36,7 @@ with open(csvpath, newline='') as csvfile:
 
 print("Financial Analysis \n----------------------------")
 print("Total months : " + str(monthcount))
-print("Total: " + str(total))
+print("Total: $" + str(total))
 
 #calculate highest profit and lowest profit and average.
 netprofit = monthlyprofit[0][1]
@@ -64,7 +64,7 @@ file_write = os.path.join("analysis", "budget_analysis.txt")
 with open(file_write, "w") as txt_file:
     txt_file.write("Financial Analysis \n----------------------------")
     txt_file.write("\nTotal months : " + str(monthcount))
-    txt_file.write("\nTotal: " + str(total))
+    txt_file.write("\nTotal: $" + str(total))
     txt_file.write("\nAverage  Change: $" + format(averageprofit, '.2f'))
     txt_file.write("\nGreatest Increase in Profits: " + hightestprofit[0] + " ($" + str(hightestprofit[1]) + ")")
     txt_file.write("\nGreatest Decrease in Profits: " + hightestloss[0] + " ($" + str(hightestloss[1]) + ")")
